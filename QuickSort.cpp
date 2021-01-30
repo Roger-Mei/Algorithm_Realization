@@ -23,7 +23,7 @@ int partition (std::vector<int>& vec, int low, int high){
     
     std::swap(vec[i+1], vec[high]);
 
-    return i++;
+    return ++i;
 }
 
 /* QuickSort function:
