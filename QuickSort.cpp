@@ -17,13 +17,12 @@ int partition (std::vector<int>& vec, int low, int high){
     for (int j = low; j <= high - 1; j++){
         // if current element is less than pivot
         if (vec[j] < pivot){
-            ++i;
-            std::swap(vec[i], vec[j]);
+            std::swap(vec[++i], vec[j]);
         }
     }
     
     std::swap(vec[i+1], vec[high]);
-    
+
     return i++;
 }
 
@@ -63,7 +62,7 @@ int main() {
     while ((std::cin >> input) && (i++ < VSIZE)){
         unsortedVec.push_back(input);
     }
-    // int unsortedVec[] = {1,8,7,5,3,6,4,2};
+
     std::cout << "The list you entered is:" << std::endl;
     printList(unsortedVec);
 
